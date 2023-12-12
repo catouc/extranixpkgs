@@ -35,6 +35,9 @@
             ytdl-sub = build;
             default = build;
           };
+
+          nixosModules."services.ytdl-sub" = import "./nixos-module.nix";
         }
     );
+
 }
