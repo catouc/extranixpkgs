@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
   with lib;
   let
-    cfg = config.services.ytdl-sub;
+    cfg = config.pb.ytdl-sub;
   in {
     options = {
       enable = mkEnableOption "Enable ytdl-sub cronjobs";
