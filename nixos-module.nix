@@ -2,7 +2,7 @@
   with lib;
   let
     cfg = config.services.ytdl-sub;
-  in
+  in {
     options = {
       enable = mkEnableOption "Enable ytdl-sub cronjobs";
 
@@ -47,7 +47,8 @@
 
         serviceConfig = {
           Type = "oneshot";
-          User = ${cfg.userName};
+          User = cfg.userName;
         };
       };
     }; 
+  }
