@@ -12,8 +12,8 @@
           version = "2023.10.28";
           format = "wheel";
           src = pkgs.fetchurl {
-            url = "https://files.pythonhosted.org/packages/6e/c4/3182e5c1aa9246f0d3146b7d1aee00870b6135133165754bbffe2e3317c6/ytdl_sub-2023.10.28-py3-none-any.whl";
-            hash = "sha256-SHF0F1qSPF97f1s3NC52OkuzxB9o51m7glB7/mnZSxk=";
+            url = "https://files.pythonhosted.org/packages/d7/31/e54f74f566c93b0088fdd5895e876d369b8384016747ee2898701458488f/ytdl_sub-2023.11.25-py3-none-any.whl";
+            hash = "sha256-iah45MLJZwwfEYgCGLxu0WdT+85B2+NdG/TNPbp+C4U=";
           };
           doCheck = false;
           propagatedBuildInputs = [
@@ -35,9 +35,6 @@
             ytdl-sub = build;
             default = build;
           };
-
-          nixosModules."services.ytdl-sub" = import "./nixos-module.nix";
         }
-    );
-
+  );
 }
